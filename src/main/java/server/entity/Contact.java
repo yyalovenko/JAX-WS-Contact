@@ -6,7 +6,7 @@ public class Contact {
     private String name;
     private String phone;
 
-    public Contact() {};
+    public Contact() {}
 
     public Contact(Long id, String name, String phone) {
         this.id = id;
@@ -36,5 +36,11 @@ public class Contact {
 
     public  void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "id " + id + ", " + name +
+                ", phone: " + phone;
     }
 }
