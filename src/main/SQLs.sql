@@ -1,0 +1,14 @@
+CREATE DATABASE demo_db;
+
+CREATE TABLE IF NOT EXISTS contacts
+( id INTEGER NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  phone VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO contacts (name,phone)
+VALUES
+("Tom", "0978523306"),
+("Alice", "0633380399"),
+("Bob", "0954809035");
