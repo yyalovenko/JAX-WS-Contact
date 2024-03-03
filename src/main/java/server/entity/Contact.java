@@ -8,13 +8,13 @@ public class Contact {
 
     public Contact() {}
 
-    public Contact(String name, String phone) {
+    public Contact(Long id, String name, String phone) {
+        this.id = id;
         this.name = name;
         this.phone = phone;
     }
 
-    public Contact(Long id, String name, String phone) {
-        this.id = id;
+    public Contact(String name, String phone) {
         this.name = name;
         this.phone = phone;
     }
@@ -50,6 +50,7 @@ public class Contact {
     }
 
     public boolean equals(Contact other) {
-        return this.name.equals(other.name) && this.phone.equals(other.phone);
+        return this.phone.equals(other.phone) && this.name.equals(other.name);
     }
+
 }
