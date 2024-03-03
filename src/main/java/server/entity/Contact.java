@@ -8,6 +8,11 @@ public class Contact {
 
     public Contact() {}
 
+    public Contact(String name, String phone) {
+        this.name = name;
+        this.phone = phone;
+    }
+
     public Contact(Long id, String name, String phone) {
         this.id = id;
         this.name = name;
@@ -42,5 +47,9 @@ public class Contact {
     public String toString() {
         return "id " + id + ", " + name +
                 ", phone: " + phone;
+    }
+
+    public boolean equals(Contact other) {
+        return this.name.equals(other.name) && this.phone.equals(other.phone);
     }
 }
